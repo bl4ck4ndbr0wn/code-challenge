@@ -13,6 +13,8 @@ input an integer number
 
 [![CircleCI](https://circleci.com/gh/bl4ck4ndbr0wn/code-challenge/tree/main.svg?style=svg)](https://circleci.com/gh/bl4ck4ndbr0wn/code-challenge/tree/main)
 
+[![Coverage Status](https://coveralls.io/repos/github/bl4ck4ndbr0wn/code-challenge/badge.svg?branch=main)](https://coveralls.io/github/bl4ck4ndbr0wn/code-challenge?branch=main)
+
 ## Setup
 
 In a python virtual environment, run:
