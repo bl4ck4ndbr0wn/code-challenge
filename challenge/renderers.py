@@ -8,8 +8,17 @@ class MultipleJSONRenderer(JSONRenderer):
 
     def render(self, data, media_type=None, renderer_context=None):
         # We want the default JSONRenderer to handle rendering
-        # integer and strings, so we need to
+        # integer and strings and If the view throws an error,
+        #`data` will contain an `errors` key, so we need to
         # check for this case.
+
+        if isinstance(data, dict):
+            errors = data.get('errors', None)
+
+            if errors is not None:
+                # As mentioned about, we will let the default JSONRenderer handle
+                # rendering errors.
+                return json.dumps(data)
 
         if isinstance(data, int):
             return json.dumps({
